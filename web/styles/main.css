@@ -1,0 +1,232 @@
+/* ====================================================
+   THƯ VIỆN SÁCH - PURE TRUE BLACK & CHARCOAL THEME
+   Màu đen thuần túy, không ánh xanh, sắc nét, tương phản cao
+   ==================================================== */
+
+:root {
+    --primary: #ffffff;
+    --primary-hover: #e5e5e5;
+    --primary-glow: rgba(255, 255, 255, 0.2);
+    --bg-body: #0a0a0a;
+    --bg-surface: #121212;
+    --bg-card: #141414;
+    --bg-card-hover: #1c1c1c;
+    --bg-input: #0a0a0a;
+    --border-color: #262626;
+    --border-focus: #555555;
+    --text-dark: #ffffff;
+    --text-muted: #8c8c8c;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar-basic {
+    background-color: #121212;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 0;
+}
+
+.navbar-brand-basic {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.navbar-brand-basic i {
+    color: #ffffff !important;
+}
+
+.nav-link-basic {
+    color: #a3a3a3 !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.75rem !important;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.nav-link-basic:hover, .nav-link-basic.active {
+    color: #ffffff !important;
+    background-color: #222222;
+}
+
+/* Search & Filter Toolbar */
+.toolbar-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Category Pills */
+.cat-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cat-pill {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #a3a3a3;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.cat-pill:hover {
+    border-color: #555555;
+    color: #ffffff;
+    background-color: var(--bg-card-hover);
+    transform: translateY(-1px);
+}
+
+.cat-pill.active {
+    background: #ffffff;
+    color: #0a0a0a !important;
+    border-color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Pure Black Book Card */
+.book-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+    border-color: #4a4a4a;
+    background-color: var(--bg-card-hover);
+}
+
+.book-cover-box {
+    width: 100%;
+    height: 235px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0a;
+    border: 1px solid #202020;
+    border-radius: 10px;
+    padding: 0.65rem;
+    margin-bottom: 0.85rem;
+    overflow: hidden;
+}
+
+.book-cover-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+.book-title {
+    font-weight: 700;
+    font-size: 0.98rem;
+    color: var(--text-dark);
+    margin-bottom: 0.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.35;
+    min-height: 2.65rem;
+}
+
+.book-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.book-title a:hover {
+    color: #d4d4d4;
+}
+
+.book-author {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Detail cover */
+.book-cover-detail {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* Mini cover in tables */
+.book-cover-mini {
+    width: 42px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Stock badges */
+.stock-badge-in {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.12);
+    border: 1px solid rgba(74, 222, 128, 0.25);
+    padding: 0.2rem 0.55rem;
+    border-radius: 50px;
+}
+
+.stock-badge-out {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #f87171;
+    background: rgba(248, 113, 113, 0.12);
+    border: 1px solid rgba(248, 113, 113, 0.25);
+    padding: 0.2rem 0.55rem;
+    border-radius: 50px;
+}
+
+/* Simple Dark Footer */
+.footer-basic {
+    margin-top: auto;
+    background: #0a0a0a;
+    border-top: 1px solid var(--border-color);
+    padding: 1.25rem 0;
+    color: #737373;
+    font-size: 0.88rem;
+}

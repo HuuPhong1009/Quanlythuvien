@@ -1,0 +1,23 @@
+# ====================================================================
+# FILE CẤU HÌNH .gitignore CHO DỰ ÁN JAVA WEB (Doanweb)
+# ====================================================================
+
+# 1. Bỏ qua các file nhị phân biên dịch .class (sẽ tự sinh lại khi build)
+web/WEB-INF/classes/
+*.class
+
+# 2. Bỏ qua cài đặt cá nhân của IDE (VS Code, Eclipse)
+.vscode/
+.settings/
+
+# 3. Bỏ qua file log và file tạm
+*.log
+*.tmp
+*.bak
+
+# 4. Bỏ qua file rác hệ điều hành và file tạm Office
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+~$*
